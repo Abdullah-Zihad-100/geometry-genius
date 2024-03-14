@@ -1,27 +1,17 @@
+// Basic simple code 
+
+// triangle --------------
+
 function calcualteTriangleArea(){
 //   get triangle base value 
 const baseField=document.getElementById('triangle-base');
 const baseValueText=baseField.value;
 const base=parseFloat(baseValueText);
 
-// baseField.value='';
-// if(isNaN(base)){
-// alert("enter valid number")
-// return;
-// }
-
-
-
 // get triangle height value 
 const heightField=document.getElementById('triangle-height');
 const heightValueText=heightField.value;
 const height=parseFloat(heightValueText);
-
-// // heightField.value='';
-// if(isNaN(height)){
-// alert("enter valid number")
-// return;
-// }
 
 // calculate area 
 const area=0.5*height*base;
@@ -30,11 +20,8 @@ const triangleArea=document.getElementById('triangle-area');
 triangleArea.innerText=area;
 
 
-
+// Rectangle --------------
 }
-
-
-
 function calcualteRactangleArea(){
     // get withe
  const widthField=document.getElementById('ractangle-width');
@@ -52,4 +39,30 @@ const area=width*length;
 // show recatangle are
 const recatangleArea=document.getElementById('rectangle-area');
 recatangleArea.innerText=area
+}
+
+
+
+
+
+// New function Mathod Use short code ----->
+
+
+// parallelogram---------------
+
+function calcualteParallelogramArea(){
+   const base=getInputValue('parallelogram-base');
+const height=getInputValue('parallelogram-heigth');
+const area=base*height
+setElementTextValue('parallelogram-area',area)
+}
+
+
+// ellipse--------------------
+
+function calcualteellipseArea(){
+const a=getInputValue('ellipse-a');
+const b=getInputValue('ellipse-b');
+const area=3.1415*a*b;
+setElementTextValue('ellipse-area',area);
 }
