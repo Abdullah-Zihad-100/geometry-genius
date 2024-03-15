@@ -1,5 +1,5 @@
 // Basic simple code 
-// triangle --------------
+// Triangle --------------
 function calcualteTriangleArea(){
 //   get triangle base value 
 const baseField=document.getElementById('triangle-base');
@@ -19,6 +19,9 @@ if(isNaN(height)||isNaN(base)){
 // get area value
 const triangleArea=document.getElementById('triangle-area');
 triangleArea.innerText=area;
+
+addCalculationEntry('Triangle',area)
+
 // Rectangle --------------
 }
 function calcualteRactangleArea(){
@@ -37,9 +40,11 @@ if(isNaN(width)||isNaN(length)){
     alert('enter valid number')
     return;
 }
-// show recatangle are
+// show recatangle area
 const recatangleArea=document.getElementById('rectangle-area');
-recatangleArea.innerText=area
+recatangleArea.innerText=area;
+addCalculationEntry('Recatangle',area)
+
 }
 // New function Mathod Use short code ----->
 // parallelogram---------------
@@ -52,8 +57,12 @@ if(isNaN(base)||isNaN(height)){
     alert('enter valid number')
     return;
 }
-setElementTextValue('parallelogram-area',area)
+setElementTextValue('parallelogram-area',area);
+// add to calculate 
+addCalculationEntry('Parallelogram',area)
+
 }
+
 // ellipse-------------------->
 function calcualteellipseArea(){
 const a=getInputValue('ellipse-a');
@@ -65,6 +74,9 @@ if(isNaN(a)||isNaN(b)){
     return;
 }
 setElementTextValue('ellipse-area',area);
+// add to calculate 
+addCalculationEntry('ellipse',area)
+
 }
 // Rhombus --------------->
 function calcualteRhombusArea(){
@@ -76,7 +88,10 @@ if(isNaN(d1)||isNaN(d2)){
     alert('enter valid number')
     return;
 }
-setElementTextValue('rhombus-area',area)
+setElementTextValue('rhombus-area',area);
+// add to calculate 
+addCalculationEntry('Rhombus',area)
+
 }
 // Pentagon  --------------->
 function calcualtePentagonArea(){
@@ -88,5 +103,7 @@ if(isNaN(p)||isNaN(b)){
     alert('enter valid number')
     return;
 }
-setElementTextValue('pentagon-area',area)
+setElementTextValue('pentagon-area',area);
+addCalculationEntry('Pentagon',area)
+
 }
